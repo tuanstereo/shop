@@ -22,7 +22,7 @@ export default function HomePage() {
         const response = await axios.get<User[]>(`${apiBaseUrl}/api/users`);
         setUsers(response.data);
       } catch {
-        setError('Không gọi được danh sách users từ backend. Hãy kiểm tra BE và DB.');
+        setError('Không gọi được');
       } finally {
         setLoading(false);
       }
