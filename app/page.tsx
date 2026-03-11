@@ -22,7 +22,7 @@ export default function HomePage() {
         const response = await axios.get<User[]>(`${apiBaseUrl}/api/users`);
         setUsers(response.data);
       } catch {
-        setError('Không gọi được nhưng buil deploy được rồi');
+        setError('deploy done');
       } finally {
         setLoading(false);
       }
